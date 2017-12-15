@@ -1,0 +1,13 @@
+.errors {
+    color: red;
+}
+
+.submit {
+    border-color: green;
+    color: green;
+}
+
+:disabled {
+    border-color: lightgray;
+    color: lightgray
+}
