@@ -15,7 +15,6 @@ export class CreateNoteComponent implements OnInit {
   }
 
   addNote() {
-    console.log(this.note);
     this._apiService.addNote(this.note);
     this.note = {text: ''};
   }

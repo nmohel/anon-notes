@@ -4,11 +4,12 @@ var Note = mongoose.model('Note');
 module.exports = {
     getAllNotes: (req, res) => {
         Note.find({})
+        .sort('-createdAt')
         .then(notes => res.json(notes))
         .catch( (err) => {
             console.log(err)
             res.json({error: 'You got an error'});
-        });
+        })
     },
     createNote: (req, res) => {
         Note.create(req.body)
